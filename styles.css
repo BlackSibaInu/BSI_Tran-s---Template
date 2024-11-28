@@ -1,0 +1,82 @@
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f7f2e7;
+    color: #4b3d2b;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid #4b3d2b;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out; /* Анимация появления контейнера */
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #4b3d2b;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Плавный переход цвета границы */
+}
+
+input:focus, select:focus {
+    border-color: #8c6a4e; /* Цвет границы при фокусе */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4b3d2b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s; /* Плавный переход цвета и масштаба */
+}
+
+button:hover {
+    background-color: #3a2d21;
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация для блоков с деталями */
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+

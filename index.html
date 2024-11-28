@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Транзакция</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Выберите способ оплаты</h1>
+        <form id="transaction-form">
+            <div class="form-group">
+                <label for="payment-method">Способ оплаты:</label>
+                <select id="payment-method" required>
+                    <option value="" disabled selected>Выберите...</option>
+                    <option value="bank">Банк</option>
+                    <option value="crypto">Криптокошелёк</option>
+                </select>
+            </div>
+
+            <div id="bank-details" class="hidden">
+                <h2>Банковская информация</h2>
+                <div class="form-group">
+                    <label for="bank-name">Название банка:</label>
+                    <input type="text" id="bank-name" placeholder="Введите название банка" required>
+                </div>
+                <div class="form-group">
+                    <label for="account-number">Номер счета:</label>
+                    <input type="text" id="account-number" placeholder="Введите номер счета" required>
+                </div>
+            </div>
+
+            <div id="crypto-details" class="hidden">
+                <h2>Криптовалютный кошелёк</h2>
+                <div class="form-group">
+                    <label for="crypto-wallet">Адрес кошелька:</label>
+                    <input type="text" id="crypto-wallet" placeholder="Введите адрес кошелька" required>
+                </div>
+            </div>
+
+            <button type="submit">Подтвердить транзакцию</button>
+        </form>
+    </div>
+    <script src="/script/app.js"></script>
+</body>
+</html>
